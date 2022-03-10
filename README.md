@@ -1,9 +1,9 @@
-# Practice learning NEAT algorithms
-### Language: Python
+## Snake game in Python
 
+### Written using pygame
 
-### Current implementations:
-* Pong game
-    * Pong game designed by Tim Russica
-* Snake game (Work in progress)
+### Planned Features:
+* NEAT AI algorithm to play itself
+* higher quality textures
+* Themed after Otto (my dog)
 
