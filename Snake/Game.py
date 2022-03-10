@@ -2,6 +2,7 @@ import Board
 import Apple
 import Snake
 import pygame
+import Snake.Colors as Colors
 
 
 class Game:
@@ -18,7 +19,7 @@ class Game:
         """
         Draws the game.
         """
-        self.window.fill((255,255,255))
+        self.window.fill(Colors.White)
 
         self.snake.eat()
         self.snake.move()

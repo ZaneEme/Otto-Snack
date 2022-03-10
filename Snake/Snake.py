@@ -1,6 +1,6 @@
 from tkinter import W
 import pygame
-import COLORS
+import Snake.Colors as Colors
 
 class Snake:
     def __init__(self, window, width, height, length=3):
@@ -10,7 +10,7 @@ class Snake:
         self.body = []
         self.window = window
         self.direction = 1
-        self.green = COLORS.GREEN
+        self.green = Colors.Green
 
         for i in range(1, length + 1):
             self.body.append(SnakeSegment(window, self.x + (25 * i), self.y))
@@ -60,5 +60,5 @@ class SnakeSegment:
         """
         Draws the snake segment to the screen.
         """
-        # pygame.draw.rect(self.window, COLORS.GREEN, (400, 400, 100, 100))
-        pygame.draw.rect(self.window, COLORS.GREEN, pygame.Rect(self.x, self.y, 25, 25))
+        # pygame.draw.rect(self.window, COLORS.Green, (400, 400, 100, 100))
+        pygame.draw.rect(self.window, Colors.Green, pygame.Rect(self.x, self.y, 25, 25))
