@@ -1,12 +1,11 @@
 from random import random
 import pygame
 import random
-import Snake
-import Snake.Colors as Colors
+import SnakeGame
+import SnakeGame.Colors as Colors
 
 
 class Apple:
-
     def __init__(self, window, width, height, snake, good=True):
         self.snake = snake
         self.x = width // 32 * random.randint(1, 32)
@@ -15,6 +14,7 @@ class Apple:
         while self.snake_collision():
             self.x = width // 32 * random.randint(1, 32)
             self.y = height // 32 * random.randint(1, 32)
+            print("Apple placed inside snake")
 
         self.good = good
         self.window = window

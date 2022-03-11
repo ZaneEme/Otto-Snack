@@ -1,8 +1,9 @@
 import Board
 import Apple
-import Snake
+import SnakeGame
 import pygame
-import Snake.Colors as Colors
+import SnakeGame.Colors as Colors
+import Snake
 
 
 class Game:
@@ -10,7 +11,7 @@ class Game:
         self.width = width
         self.height = height
         self.window = window
-        self.apples = []    
+        self.apples = []
 
         self.board = Board.Board(self.window, self.width, self.height)
         self.snake = Snake.Snake(self.window, self.width, self.height)
@@ -35,7 +36,7 @@ class Game:
         Turns the snake.
         Checks so you cannot go oposite direction.
         """
-        #up and down are even numbers
+        # up and down are even numbers
         current_orientation = self.snake.direction % 2
         if direction % 2 != current_orientation:
             self.snake.turn(direction)
@@ -44,14 +45,21 @@ class Game:
         """
         Executes a single game loop.
         """
-        for apple in self.apples: 
-            print(f"({apple.x // 25} {apple.y // 25})", end=' ')
+        for apple in self.apples:
+            print(f"({apple.x // 25} {apple.y // 25})", end=" ")
         print()
 
         if len(self.apples) < 3:
-            self.apples.append(Apple.Apple(self.window, self.width, self.height, self.snake))
+            self.apples.append(
+                Apple.Apple(self.window, self.width, self.height, self.snake)
+            )
 
-        if self.snake.body[0].x < 0 or self.snake.body[0].x > self.width - 25 or self.snake.body[0].y < 0 or self.snake.body[0].y > self.height - 25:
+        if (
+            self.snake.body[0].x < 0
+            or self.snake.body[0].x > self.width - 25
+            or self.snake.body[0].y < 0
+            or self.snake.body[0].y > self.height - 25
+        ):
             self.reset()
 
         for segment in self.snake.body[3:]:

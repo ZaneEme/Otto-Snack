@@ -1,5 +1,6 @@
 import pygame
-import Snake.Colors as Colors
+import SnakeGame.Colors as Colors
+
 
 class Board:
     def __init__(self, window, width, height):
@@ -15,18 +16,10 @@ class Board:
         box_height = 25
         for i in range(self.width // box_width):
             pygame.draw.line(
-                self.window,
-                Colors.White,
-                (i * 25, 0),
-                (i * 25, self.height),
-                1
+                self.window, Colors.Grey, (i * 25, 0), (i * 25, self.height), 1
             )
 
         for i in range(self.height // box_height):
             pygame.draw.line(
-                self.window,
-                Colors.White,
-                (0, i * 25),
-                (self.width, i * 25),
-                1
+                self.window, Colors.Grey, (0, i * 25), (self.width, i * 25), 1
             )

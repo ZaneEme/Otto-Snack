@@ -1,6 +1,7 @@
 from tkinter import W
 import pygame
-import Snake.Colors as Colors
+import SnakeGame.Colors as Colors
+
 
 class Snake:
     def __init__(self, window, width, height, length=3):

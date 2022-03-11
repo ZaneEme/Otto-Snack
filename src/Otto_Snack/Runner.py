@@ -53,8 +53,11 @@ class SnakeGame:
                 self.loopcounter += 1
 
             pygame.display.update()
-        
+
+
+    def main():
+        SnakeGame(800,800).Runner()
 
 
 if __name__ == "__main__":
-    SnakeGame(800,800).Runner()
+    SnakeGame.main()
