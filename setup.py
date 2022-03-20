@@ -164,7 +164,7 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
-            'Otto-Snake = SnakeGame:main',
+            'Otto_Snack=Otto_Snack:main',
         ],
     },
 

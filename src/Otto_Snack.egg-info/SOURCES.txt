@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/Otto_Snack/Apple.py
+src/Otto_Snack/Board.py
+src/Otto_Snack/Colors.py
+src/Otto_Snack/Game.py
+src/Otto_Snack/Runner.py
+src/Otto_Snack/Snake.py
+src/Otto_Snack/__init__.py
+src/Otto_Snack.egg-info/PKG-INFO
+src/Otto_Snack.egg-info/SOURCES.txt
+src/Otto_Snack.egg-info/dependency_links.txt
+src/Otto_Snack.egg-info/entry_points.txt
+src/Otto_Snack.egg-info/requires.txt
+src/Otto_Snack.egg-info/top_level.txt

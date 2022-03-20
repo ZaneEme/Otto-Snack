@@ -1,0 +1,3 @@
+[console_scripts]
+Otto_Snack = Otto_Snack:main
+
