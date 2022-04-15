@@ -2,6 +2,7 @@ from tkinter import W
 import pygame
 import COLORS
 
+
 class Snake:
     def __init__(self, window, width, height, length=3):
         self.length = length

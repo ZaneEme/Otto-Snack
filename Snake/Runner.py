@@ -1,4 +1,3 @@
-from tkinter import W
 import pygame
 from Game import Game
 
@@ -21,14 +20,20 @@ class SnakeGame:
         running = True
         while running:
             clock.tick(60)
+            # Get each key pressed
+            keys = pygame.key.get_pressed()
 
-            # set up close button
+            # Close button --> Create event to end game
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
                     break
 
-            keys = pygame.key.get_pressed()
+            # Esc -> Create event to quit the game
+            if keys[pygame.K_ESCAPE]:
+                pygame.event.post(pygame.event.Event(pygame.QUIT))
+
+            # Test for keys pressed
             if keys[pygame.K_UP] or keys[pygame.K_w]:
                 self.game.turn(0)
                 # print("UP!")
@@ -42,19 +47,15 @@ class SnakeGame:
                 self.game.turn(1)
                 # print("RIGHT!")
 
-            # Esc -> Create event to quit the game
-            if keys[pygame.K_ESCAPE]:
-                pygame.event.post(pygame.event.Event(pygame.QUIT))
-
-            if self.loopcounter >= 5:
+            # Create counter to control the FPS
+            if self.loopcounter >= 6:
                 self.game.loop()
                 self.loopcounter = 0
             else:
                 self.loopcounter += 1
 
             pygame.display.update()
-        
 
 
 if __name__ == "__main__":
-    SnakeGame(800,800).Runner()
+    SnakeGame(800, 800).Runner()
