@@ -1,5 +1,5 @@
 import pygame
-from Game import Game
+from otto_snack import Game
 
 pygame.init()
 
@@ -10,9 +10,10 @@ class SnakeGame:
         self.height = height
 
         self.window = pygame.display.set_mode((self.width, self.height))
-        self.game = Game(self.window, self.width, self.height)
+        self.game = Game.Game(self.window, self.width, self.height)
         self.loopcounter = 0
-
+        
+        pygame.display.set_caption(f"Score: 0")
     def Runner(self):
 
         clock = pygame.time.Clock()
@@ -57,5 +58,9 @@ class SnakeGame:
             pygame.display.update()
 
 
-if __name__ == "__main__":
+def main():
     SnakeGame(800, 800).Runner()
+
+
+if __name__ == "__main__":
+    main()

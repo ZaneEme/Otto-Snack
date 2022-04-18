@@ -1,8 +1,9 @@
 from random import random
 import pygame
 import random
-import Snake
-import COLORS
+from otto_snack import Snake
+from otto_snack import COLORS
+
 
 class Apple:
     def __init__(self, window, width, height, snake, good=True):

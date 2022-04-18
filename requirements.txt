@@ -1,2 +1,1 @@
-neat-python
-pygame
+pygame==2.1.2; python_version >= "3.6"

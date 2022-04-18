@@ -1,6 +1,6 @@
 from tkinter import W
 import pygame
-import COLORS
+from otto_snack import COLORS
 
 
 class Snake:

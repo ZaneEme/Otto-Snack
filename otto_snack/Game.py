@@ -1,6 +1,6 @@
-import Board
-import Apple
-import Snake
+from otto_snack import Board
+from otto_snack import Apple
+from otto_snack import Snake
 import pygame
 
 
